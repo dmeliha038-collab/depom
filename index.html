@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.json">
+  <title>Tesetür Hakkiye - Tesettür Giyim</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo" data-nav="anasayfa">Tesetür<span>Hakkiye</span></a>
+
+      <div class="search-wrap">
+        <input type="text" id="searchInput" data-lang="search.place" placeholder="Ürün ara..." autocomplete="off">
+        <span class="search-icon">🔍</span>
+      </div>
+
+      <nav>
+        <ul id="navList">
+          <li><a data-nav="anasayfa">Ana Sayfa</a></li>
+          <li><a data-nav="kategoriler">Kategoriler</a></li>
+          <li><a data-nav="urunler">Ürünler</a></li>
+          <li><a data-nav="yeni-gelenler">Yeni Gelenler</a></li>
+          <li><a data-nav="favoriler">Favoriler</a></li>
+          <li><a data-nav="iletisim">İletişim</a></li>
+          <li><a data-nav="siparis-takip">Sipariş Takibi</a></li>
+          <li><a data-nav="profil">Profil</a></li>
+          <li><a data-nav="blog">Blog</a></li>
+          <li><a data-nav="hediye-karti">Hediye Kartı</a></li>
+          <li><a data-nav="kuponlar">Kuponlar</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="lang-btn" id="langBtn" aria-label="Dil değiştir">🇹🇷 TR</button>
+        <button class="theme-btn" id="themeBtn" aria-label="Tema değiştir">🌙</button>
+        <button class="cart-btn" id="wishlistHeaderBtn" aria-label="Favoriler" data-nav="favoriler">
+          ❤️
+          <span class="cart-badge wishlist-badge" id="wishlistBadge">0</span>
+        </button>
+        <button class="cart-btn" id="cartBtn" aria-label="Sepet">
+          🛒
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <button class="auth-btn" id="authBtn" aria-label="Giriş">👤</button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menü">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="breadcrumb" id="breadcrumb"></div>
+
+  <main id="mainContent">
+  </main>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="newsletter-inner">
+      <div class="newsletter-text">
+        <h3 data-lang="newsletter.h3">Kampanyalardan Haberdar Ol</h3>
+        <p data-lang="newsletter.p">Yeni ürünler ve fırsatlar için e-posta bültenimize kaydolun.</p>
+      </div>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" id="newsletterEmail" data-lang="newsletter.place" placeholder="E-posta adresiniz" required>
+        <button type="submit" data-lang="newsletter.btn">Kaydol</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Tesetür Hakkiye</h4>
+        <p data-lang="footer.desc">Tesettür giyimde şıklığı ve kaliteyi bir araya getiren modern alışveriş deneyimi. En yeni tesettür modelleri kapınıza kadar geliyor.</p>
+      </div>
+      <div class="footer-col" id="footerQuickLinks">
+        <h4 data-lang="footer.quickLinks">Hızlı Linkler</h4>
+        <ul>
+          <li><a data-nav="anasayfa">Ana Sayfa</a></li>
+          <li><a data-nav="kategoriler">Kategoriler</a></li>
+          <li><a data-nav="urunler">Ürünler</a></li>
+          <li><a data-nav="yeni-gelenler">Yeni Gelenler</a></li>
+          <li><a data-nav="favoriler">Favoriler</a></li>
+          <li><a data-nav="iletisim">İletişim</a></li>
+          <li><a data-nav="siparis-takip">Sipariş Takibi</a></li>
+          <li><a data-nav="profil">Profil</a></li>
+          <li><a data-nav="blog">Blog</a></li>
+          <li><a data-nav="hediye-karti">Hediye Kartı</a></li>
+          <li><a data-nav="kuponlar">Kuponlar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-lang="footer.customerService">Müşteri Hizmetleri</h4>
+        <ul>
+          <li><a data-lang="footer.faq" href="#">Sık Sorulan Sorular</a></li>
+          <li><a data-lang="footer.returns" href="#">İade ve Değişim</a></li>
+          <li><a data-lang="footer.shipping" href="#">Kargo Bilgisi</a></li>
+          <li><a data-lang="footer.privacy" href="#">Gizlilik Politikası</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-lang="footer.contactTitle">İletişim</h4>
+        <ul>
+          <li><a href="tel:08501234567">0850 123 45 67</a></li>
+          <li><a href="mailto:info@teseturhakkiye.com">info@teseturhakkiye.com</a></li>
+          <li>İstanbul, Türkiye</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom" data-lang="footer.copyright">
+      &copy; 2026 Tesetür Hakkiye
+    </div>
+  </footer>
+
+  <!-- Cart Modal -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-header">
+      <h2>Sepetim <span id="cartCount" class="cart-count"></span></h2>
+      <button class="cart-close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <div class="cart-empty-icon">🛒</div>
+        <p>Sepetiniz boş</p>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter">
+      <div class="coupon-wrap" id="couponWrap">
+        <input type="text" id="couponInput" placeholder="Kupon kodu (örn: MODA10)" autocomplete="off">
+        <button id="couponBtn">Uygula</button>
+      </div>
+      <div id="couponStatus"></div>
+      <div class="cart-total">
+        <span>Toplam</span>
+        <span id="cartTotal">₺0</span>
+      </div>
+      <button class="cart-checkout">Alışverişi Tamamla</button>
+    </div>
+  </div>
+
+  <!-- Product Detail Modal -->
+  <div class="detail-overlay" id="detailOverlay">
+    <div class="detail-modal">
+      <button class="detail-close" id="detailClose">✕</button>
+      <img class="detail-img" id="detailImg" src="" alt="">
+      <div class="detail-body">
+        <span class="detail-category" id="detailCategory"></span>
+        <h2 id="detailTitle"></h2>
+        <div class="detail-price" id="detailPrice"></div>
+        <p class="detail-desc" id="detailDesc"></p>
+        <button class="btn-add-large" id="detailAddBtn">Sepete Ekle</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Auth Modal -->
+  <div class="auth-overlay" id="authOverlay">
+    <div class="auth-modal">
+      <button class="auth-modal-close" id="authModalClose">✕</button>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login" data-lang="auth.login">Giriş</button>
+        <button class="auth-tab" data-tab="register" data-lang="auth.register">Kayıt Ol</button>
+      </div>
+      <form id="authForm" class="auth-form">
+        <div id="authContent"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating Social -->
+  <div class="floating-social">
+    <a href="#" class="social-link" aria-label="Instagram">📷</a>
+    <a href="#" class="social-link" aria-label="Facebook">👍</a>
+    <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+    <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="checkout-overlay" id="checkoutOverlay"></div>
+  <div class="checkout-modal" id="checkoutModal">
+    <div class="checkout-header">
+      <h2 data-lang="checkout.title">Alışverişi Tamamla</h2>
+      <button class="checkout-close" id="checkoutClose">✕</button>
+    </div>
+    <div class="checkout-content" id="checkoutContent"></div>
+  </div>
+
+  <!-- Size Guide Modal -->
+  <div class="sizeguide-overlay" id="sizeGuideOverlay">
+    <div class="sizeguide-modal">
+      <button class="sizeguide-close" id="sizeGuideClose">✕</button>
+      <h3 data-lang="product.sizeGuide">Beden Rehberi</h3>
+      <div class="sizeguide-table-wrap">
+        <table class="sizeguide-table">
+          <tr><th>Beden</th><th>Göğüs (cm)</th><th>Bel (cm)</th><th>Kalça (cm)</th></tr>
+          <tr><td>XXS</td><td>76-81</td><td>58-63</td><td>84-89</td></tr>
+          <tr><td>XS</td><td>81-86</td><td>63-68</td><td>89-94</td></tr>
+          <tr><td>S</td><td>86-91</td><td>68-73</td><td>94-99</td></tr>
+          <tr><td>M</td><td>91-96</td><td>73-78</td><td>99-104</td></tr>
+          <tr><td>L</td><td>96-101</td><td>78-83</td><td>104-109</td></tr>
+          <tr><td>XL</td><td>101-106</td><td>83-88</td><td>109-114</td></tr>
+          <tr><td>XXL</td><td>106-111</td><td>88-93</td><td>114-119</td></tr>
+          <tr><td>3XL</td><td>111-116</td><td>93-98</td><td>119-124</td></tr>
+          <tr><td>4XL</td><td>116-121</td><td>98-103</td><td>124-129</td></tr>
+          <tr><td>5XL</td><td>121-126</td><td>103-108</td><td>129-134</td></tr>
+        </table>
+      </div>
+      <p style="font-size:0.8rem;color:var(--text-light);margin-top:12px">Ölçüler yaklaşıktır. Ürün bazında farklılık gösterebilir.</p>
+    </div>
+  </div>
+
+  <!-- Compare Bar -->
+  <div class="compare-bar" id="compareBar"></div>
+
+  <!-- Compare Overlay -->
+  <div class="compare-overlay" id="compareOverlay"></div>
+
+  <!-- Live Chat -->
+  <button class="chat-bubble" id="chatBubble" aria-label="Canlı Destek">💬</button>
+  <div class="chat-overlay" id="chatOverlay"></div>
+  <div class="chat-modal" id="chatModal">
+    <div class="chat-header">
+      <h3 data-lang="chat.title">Canlı Destek</h3>
+      <button class="chat-close" id="chatClose">✕</button>
+    </div>
+    <div class="chat-body" id="chatBody"></div>
+    <div class="chat-footer">
+      <input type="text" id="chatInput" data-lang="chat.placeholder" placeholder="Mesajınızı yazın...">
+      <button class="chat-send" id="chatSend">➤</button>
+    </div>
+  </div>
+
+  <!-- Blog Nav item (added via JS to nav) -->
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
